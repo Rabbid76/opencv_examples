@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EmguCV_equalize": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\source\\opencv\\opencv\\samples\\data"
+    }
+  }
+}
