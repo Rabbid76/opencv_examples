@@ -11,7 +11,7 @@ namespace EmguCV_equalize
     {
         static readonly string _image_name = "fruits.jpg";
         static readonly IFilter _filter = Equalizer.New();
-        
+
         static void Main(string[] args)
         {
             var test_image = Image.New(_image_name);

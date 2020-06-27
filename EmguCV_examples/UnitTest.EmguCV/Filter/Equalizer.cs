@@ -9,7 +9,7 @@ namespace UnitTest.EmguCV.Filter
     public class Equalizer
     {
         static readonly IFilter filter = EmguCVUtility.Filter.Equalizer.New();
-
+            
         [TestMethod]
         public void EquilizerTest()
         {
