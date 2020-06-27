@@ -1,9 +1,9 @@
 ﻿using Emgu.CV;
 using Emgu.CV.CvEnum;
-using EmguCV_equalize.EmguCV.Image;
+using EmguCVUtility.Image;
 using System.Drawing;
 
-namespace EmguCV_equalize.EmguCV.Filter
+namespace EmguCVUtility.Filter
 {
     public class Test
         : IFilter

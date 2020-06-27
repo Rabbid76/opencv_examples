@@ -1,6 +1,6 @@
-﻿using EmguCV_equalize.EmguCV.Image;
+﻿using EmguCVUtility.Image;
 
-namespace EmguCV_equalize.EmguCV.Filter
+namespace EmguCVUtility.Filter
 {
     public class PassThrough
         : IFilter

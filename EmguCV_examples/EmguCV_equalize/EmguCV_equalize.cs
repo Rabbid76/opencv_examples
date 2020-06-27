@@ -2,8 +2,8 @@
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
-using EmguCV_equalize.EmguCV.Image;
-using EmguCV_equalize.EmguCV.Filter;
+using EmguCVUtility.Image;
+using EmguCVUtility.Filter;
 
 namespace EmguCV_equalize
 {

@@ -1,16 +1,13 @@
 ﻿using Emgu.CV;
-using Emgu.CV.CvEnum;
-using EmguCV_equalize.EmguCV.Image;
-using System.Drawing;
-using System.Numerics;
+using EmguCVUtility.Image;
 
-namespace EmguCV_equalize.EmguCV.Filter
+namespace EmguCVUtility.Filter
 {
     /// <summary>
     /// See Histogram Equalization
     /// https://docs.opencv.org/master/d5/daf/tutorial_py_histogram_equalization.html
     /// </summary>
-    class Equalizer
+    public class Equalizer
         : IFilter
     {
         static public IFilter New() => new Equalizer();

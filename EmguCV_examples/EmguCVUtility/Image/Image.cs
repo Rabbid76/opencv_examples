@@ -2,7 +2,7 @@
 using Emgu.CV.CvEnum;
 using System.Drawing;
 
-namespace EmguCV_equalize.EmguCV.Image
+namespace EmguCVUtility.Image
 {
     public class Image
         : IImage
