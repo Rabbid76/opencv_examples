@@ -4,6 +4,6 @@ namespace EmguCV_equalize.EmguCV.Image
 {
     public interface IImage
     {
-        public Mat image { get; set; }
+        public Mat matrix { get; set; }
     }
 }

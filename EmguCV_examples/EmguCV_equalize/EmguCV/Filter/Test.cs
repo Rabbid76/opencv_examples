@@ -24,9 +24,8 @@ namespace EmguCV_equalize.EmguCV.Filter
 
         public IImage transform(IImage image)
         {
-            var image_mat = new Mat(image.image.Rows, image.image.Cols, DepthType.Cv8U, image.image.NumberOfChannels);
-            var dest_image = new Image.Image(image_mat);
-            CvInvoke.Filter2D(image.image, dest_image.image, this.kernel, new Point(0, 0));
+            var dest_image = Image.Image.New8U(image.matrix.Size, image.matrix.NumberOfChannels);
+            CvInvoke.Filter2D(image.matrix, dest_image.matrix, this.kernel, new Point(0, 0));
             return dest_image;
         }
     }
