@@ -18,7 +18,7 @@ namespace UnitTest.EmguCV.Filter
             byte[] image_array = Enumerable.Range(0, 16).Select(x => (byte)x).ToArray();
             test_image.matrix.SetTo(image_array);
 
-            var filtered_image = flip_x_axis.transform(test_image);
+            var filtered_image = flip_x_axis.transform_in_place(test_image);
             byte[] filter_data = new byte[image_array.Length];
             filtered_image.matrix.CopyTo(filter_data);
 
@@ -38,7 +38,7 @@ namespace UnitTest.EmguCV.Filter
             byte[] image_array = Enumerable.Range(0, 16).Select(x => (byte)x).ToArray();
             test_image.matrix.SetTo(image_array);
 
-            var filtered_image = flip_y_axis.transform(test_image);
+            var filtered_image = flip_y_axis.transform_in_place(test_image);
             byte[] filter_data = new byte[image_array.Length];
             filtered_image.matrix.CopyTo(filter_data);
 

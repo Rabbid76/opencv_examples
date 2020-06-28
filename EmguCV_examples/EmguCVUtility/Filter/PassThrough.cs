@@ -7,6 +7,6 @@ namespace EmguCVUtility.Filter
     {
         static public IFilter New() => new PassThrough();
 
-        public IImage transform(IImage image) => image;
+        public IImage transform_in_place(IImage image) => image;
     }
 }

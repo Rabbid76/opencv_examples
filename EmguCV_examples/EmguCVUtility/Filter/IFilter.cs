@@ -4,6 +4,6 @@ namespace EmguCVUtility.Filter
 {
     public interface IFilter
     {
-        IImage transform(IImage image);
+        IImage transform_in_place(IImage image);
     }
 }

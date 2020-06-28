@@ -14,12 +14,10 @@ namespace EmguCVUtility.Image
             this.matrix = matrix;
         }
 
-        static public Image New(string file_name) => new Image(CvInvoke.Imread(file_name, ImreadModes.AnyColor));
+        static public Image New(Mat matrix) => new Image(matrix);
+        static public Image New(string file_name) => New(CvInvoke.Imread(file_name, ImreadModes.AnyColor));
+        static public Image New8U(Size size, int channels) => New(new Mat(size, DepthType.Cv8U, channels));
 
-        static public Image New8U(Size size, int channels)
-        {
-            var matrix = new Mat(size, DepthType.Cv8U, channels);
-            return new Image(matrix);
-        }
+        public IImage clone() => New(this.matrix.Clone());
     }
 }

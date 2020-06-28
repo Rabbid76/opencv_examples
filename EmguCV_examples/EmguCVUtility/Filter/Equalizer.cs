@@ -12,25 +12,23 @@ namespace EmguCVUtility.Filter
     {
         static public IFilter New() => new Equalizer();
 
-        public IImage transform(IImage image)
+        public IImage transform_in_place(IImage image)
         {
-            var dest_image = image.matrix.NumberOfChannels == 1 ? 
+            image.matrix = image.matrix.NumberOfChannels == 1 ? 
                 transfrormU8(image.matrix) : transformU(image.matrix);
-            return dest_image;
+            return image;
         }
 
-        private IImage transfrormU8(Mat source_matrix)
+        private Mat transfrormU8(Mat matrix)
         {
-            var dest_image = Image.Image.New8U(source_matrix.Size, 1);
-            CvInvoke.EqualizeHist(source_matrix, dest_image.matrix);
-            return dest_image;
+            CvInvoke.EqualizeHist(matrix, matrix);
+            return matrix;
         }
 
-        private IImage transformU(Mat source_matrix)
+        private Mat transformU(Mat source_matrix)
         {
-            var dest_image = transfrormU8(source_matrix.Reshape(1));
-            dest_image.matrix = dest_image.matrix.Reshape(source_matrix.NumberOfChannels);
-            return dest_image;
+            var matrix = transfrormU8(source_matrix.Reshape(1));
+            return matrix.Reshape(source_matrix.NumberOfChannels);
         }
     }
 }

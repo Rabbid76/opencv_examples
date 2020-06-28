@@ -18,11 +18,10 @@ namespace EmguCVUtility.Filter
 
         public static Flip New(FlipAxis direction) => new Flip(direction);
 
-        public IImage transform(IImage image)
+        public IImage transform_in_place(IImage image)
         {
-            var dest_image = Image.Image.New8U(image.matrix.Size, image.matrix.NumberOfChannels);
-            CvInvoke.Flip(image.matrix, dest_image.matrix, this.Direction == FlipAxis.YAxis ? FlipType.Horizontal : FlipType.Vertical);
-            return dest_image;
+            CvInvoke.Flip(image.matrix, image.matrix, this.Direction == FlipAxis.YAxis ? FlipType.Horizontal : FlipType.Vertical);
+            return image;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace EmguCV_equalize
         static void Main(string[] args)
         {
             var test_image = Image.New(_image_name);
-            var filtered_image = _filter.transform(test_image);
+            var filtered_image = _filter.transform_in_place(test_image.clone());
 
             var window_name_1 = $"{_image_name} - original";
             var window_name_2 = $"{_image_name} - equalization filter";

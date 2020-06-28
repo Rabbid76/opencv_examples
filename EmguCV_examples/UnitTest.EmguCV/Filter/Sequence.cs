@@ -12,8 +12,6 @@ namespace UnitTest.EmguCV.Filter
             EmguCVUtility.Filter.Sequence.New(new IFilter[]
                 {
                     EmguCVUtility.Filter.Flip.New(FlipAxis.XAxis),
-                    EmguCVUtility.Filter.Flip.New(FlipAxis.YAxis),
-                    EmguCVUtility.Filter.Flip.New(FlipAxis.XAxis),
                     EmguCVUtility.Filter.Flip.New(FlipAxis.YAxis)
                 });
 
@@ -24,7 +22,7 @@ namespace UnitTest.EmguCV.Filter
             byte[] image_array = Enumerable.Range(0, 16).Select(x => (byte)x).ToArray();
             test_image.matrix.SetTo(image_array);
 
-            var filtered_image = filter_sequance.transform(test_image);
+            var filtered_image = filter_sequance.transform_in_place(test_image);
             byte[] filter_data = new byte[image_array.Length];
             filtered_image.matrix.CopyTo(filter_data);
 
@@ -32,7 +30,7 @@ namespace UnitTest.EmguCV.Filter
             {
                 for (int y = 0; y < 4; y++)
                 {
-                    Assert.AreEqual(y * 4 + x, filter_data[y * 4 + x]);
+                    Assert.AreEqual((3 - y) * 4 + 3 - x, filter_data[y * 4 + x]);
                 }
             }
         }

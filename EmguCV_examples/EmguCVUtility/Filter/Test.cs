@@ -22,11 +22,10 @@ namespace EmguCVUtility.Filter
             return new Test(convol_colution);
         }
 
-        public IImage transform(IImage image)
+        public IImage transform_in_place(IImage image)
         {
-            var dest_image = Image.Image.New8U(image.matrix.Size, image.matrix.NumberOfChannels);
-            CvInvoke.Filter2D(image.matrix, dest_image.matrix, this.kernel, new Point(0, 0));
-            return dest_image;
+            CvInvoke.Filter2D(image.matrix, image.matrix, this.kernel, new Point(0, 0));
+            return image;
         }
     }
 }

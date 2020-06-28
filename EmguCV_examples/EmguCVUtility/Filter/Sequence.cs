@@ -15,14 +15,13 @@ namespace EmguCVUtility.Filter
 
         public static Sequence New(IEnumerable<IFilter> filter_sequence) => new Sequence(filter_sequence);
 
-        public IImage transform(IImage image)
+        public IImage transform_in_place(IImage image)
         {
-            var dest_image = image;
             foreach (var filter in this.FilterSequence)
             {
-                dest_image = filter.transform(dest_image);
+                image = filter.transform_in_place(image);
             }
-            return dest_image;
+            return image;
         }
     }
 }
