@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmguCV_NET_core_test", "Emg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmguCV_equalize", "EmguCV_equalize\EmguCV_equalize.csproj", "{D14A77E4-FCA6-4302-8B26-4D9C014C2B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.EmguCV", "UnitTest.EmguCV\UnitTest.EmguCV.csproj", "{EBA4715E-9C12-4022-B926-0E8545F17A33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest.EmguCV", "UnitTest.EmguCV\UnitTest.EmguCV.csproj", "{EBA4715E-9C12-4022-B926-0E8545F17A33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmguCVUtility", "EmguCVUtility\EmguCVUtility.csproj", "{685033AA-B7B0-43FE-A7DF-4AAD2756C6B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmguCVUtility", "EmguCVUtility\EmguCVUtility.csproj", "{685033AA-B7B0-43FE-A7DF-4AAD2756C6B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmguCVUtility_WPF_core", "EmguCVUtility_WPF_core\EmguCVUtility_WPF_core.csproj", "{64620222-C072-4EE1-9FBA-39E220C332CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{685033AA-B7B0-43FE-A7DF-4AAD2756C6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{685033AA-B7B0-43FE-A7DF-4AAD2756C6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{685033AA-B7B0-43FE-A7DF-4AAD2756C6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64620222-C072-4EE1-9FBA-39E220C332CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64620222-C072-4EE1-9FBA-39E220C332CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64620222-C072-4EE1-9FBA-39E220C332CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64620222-C072-4EE1-9FBA-39E220C332CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
